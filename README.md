@@ -1,13 +1,13 @@
 # Dress up spele
 
 ### Iesakumam:
-- [ ] Izveleties temu
-- [ ] Atrast/Izveidot dizainus
+- [x] Izveleties temu
+- [x] Atrast/Izveidot dizainus
 - [ ] Atrast skanas
 ### Unity:
-- [ ] Izveidot teksta ievades laukus:
-    - [ ] Teksta
-    - [ ] Skaitlu
+- [x] Izveidot teksta ievades laukus:
+    - [x] Teksta
+    - [x] Skaitlu
 - [ ] Izveidot teksta lauku
 - [ ] Izveidot drop-down (iespeja izveleties 2+ telus)
 - [ ] Izveidot dazadas kategorijas:
