@@ -7,33 +7,45 @@ using UnityEngine.UI;
 
 public class ShowImage : MonoBehaviour
 {
-    public GameObject skinTones;
+    public GameObject base1, base2, base3, base4, base5;
+    public GameObject Skintones;
     public Sprite[] images;
+    /*
     public GameObject IzmeraSlaideris;
     public GameObject RotacijasSlaideris;
-
-    public void BinaAttels(bool vertiba)
+    */
+   /* public void BinaAttels(bool vertiba)
     {
         bins.SetActive(vertiba);
         paKreisi.GetComponent<Toggle>().interactable = vertiba;
         paLabi.GetComponent<Toggle>().interactable = vertiba;
     }
-
-    public void LacisaAttels(bool vertiba)
+   *//*
+    public void Base1(bool img)
     {
-        lacitis.SetActive(vertiba);
+        base1.SetActive(img);
     }
 
-    public void TantesAttels(bool vertiba)
+    public void Base2(bool img)
     {
-        tante.SetActive(vertiba);
+        base2.SetActive(img);
     }
 
-    public void MasinasAttels(bool vertiba)
+    public void Base3(bool img)
     {
-        masina.SetActive(vertiba);
+        base3.SetActive(img);
     }
 
+    public void Base4(bool img)
+    {
+        base4.SetActive(img);
+    }
+
+    public void Base5(bool img)
+    {
+        base5.SetActive(img);
+    }
+    /*
     public void PaKreisiBins()
     {
         bins.transform.localScale = new Vector2(1, 1);
@@ -43,13 +55,12 @@ public class ShowImage : MonoBehaviour
     {
         bins.transform.localScale = new Vector2(-1, 1);
     }
-
-    public void Izkritosais(int i)
+    */
+    public void Dropdown(int i)
     {
-            skinTones.GetComponent<Image>().sprite
-                = images[i];
+            Skintones.GetComponent<Image>().sprite = images[i];
     }
-
+    /*
     public void mainitLielumu()
     {
         float pasreizejaisIzmers =
@@ -66,4 +77,5 @@ public class ShowImage : MonoBehaviour
         mainigaisAttels.transform.localRotation =
             Quaternion.Euler(0, 0, pasreizejaVertiba * 360);
     }
+    */
 }
