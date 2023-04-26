@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ShowTxt : MonoBehaviour
+{
+    private string txt, agetxt;
+    int age;
+    public GameObject inputFieldName;
+    public GameObject inputFieldAge;
+    public GameObject txtShow;
+
+    public string ToUpperFirstLetter(string source)
+    {
+        if (string.IsNullOrEmpty(source))
+            return string.Empty;
+        char[] letters = source.ToCharArray();
+        letters[0] = char.ToUpper(letters[0]);
+        return new string(letters);
+    }
+
+    public void SaveTxt()
+    {
+        txt = inputFieldName.GetComponent<Text>().text;
+        age = int.Parse(inputFieldAge.GetComponent<Text>().text);
+        txtShow.GetComponent<Text>().text =
+            "Mani sauc " + ToUpperFirstLetter(txt) + "!\nMan ir "+ age+" gadi!";
+    }
+   
+}
