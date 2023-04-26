@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ShowImage.cs" />
      <Compile Include="Assets\Scripts\ShowTxt.cs" />
      <None Include="Assets\Scripts\New Text Document.txt" />
  <Reference Include="UnityEngine.UI">
