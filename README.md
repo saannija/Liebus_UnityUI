@@ -12,11 +12,12 @@
 - [ ] Izveidot drop-down (iespeja izveleties 2+ telus)
 - [ ] Izveidot dazadas kategorijas:
     - [ ] Bikses
-    - [ ] Krekls
-    - [ ] Cepure
+    - [ ] Krekli
+    - [ ] Kleitas
     - [ ] Aksesuari
 - [ ] Izveidot toggle pogu apgerbiem (paradit/paslept)
 - [ ] Izveidot drag/drop funkciju apgerbam
 - [ ] Ievietot audio
 - [ ] Ievietot scroll view
+- [ ] Ievietot krasu mainosus sliderus
 - [ ] Ievietot 2 slider (platums/garums)
