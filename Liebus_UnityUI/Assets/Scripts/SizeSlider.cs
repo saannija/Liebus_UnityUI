@@ -1,17 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;using System.Collections.Generic;using UnityEngine;using UnityEngine.UI;public class SizeSlider : MonoBehaviour {    public GameObject sliderW;    public GameObject sliderH;    private RectTransform transform;    public GameObject character;	// Use this for initialization	public void WidthChanging()	{        /*		float currentValue=sliderW.GetComponent<Slider>().value;        W = currentValue;		character.transform.localScale = new Vector2(1F*currentValue,H);	*/        float size = sliderW.GetComponent<Slider>().value;        float H = character.transform.localScale.y;        character.transform.localScale = new Vector2(1f * size, H);    }    public void HeightChanging()    {        /*        float currentValue = sliderH.GetComponent<Slider>().value;        H = currentValue;        character.transform.localScale = new Vector2(W,1F*currentValue);    */        float size = sliderH.GetComponent<Slider>().value;        float W = character.transform.localScale.x;        character.transform.localScale = new Vector2(W, 1f * size);        Vector2 pos = character.transform.position;
+        character.transform.position += new Vector3(0.0f, size, 0.0f);
 
-public class SizeSlider : MonoBehaviour {
-	public GameObject slider;
-    private RectTransform rtransform;
-    public GameObject character;
-	// Use this for initialization
-	public void WidthChanging()
-	{
-		float currentValue=slider.GetComponent<Slider>().value;
-		//character.rtransform.sizeDelta=new Vector2(currentValue,0,2);
-		character.transform.localScale = new Vector2(1F*currentValue,1);
-	}
-}
+    }}

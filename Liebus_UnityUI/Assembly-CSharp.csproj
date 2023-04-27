@@ -46,12 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Collider.cs" />
      <Compile Include="Assets\Scripts\ColorSlider.cs" />
      <Compile Include="Assets\Scripts\Moving.cs" />
      <Compile Include="Assets\Scripts\ShowImage.cs" />
      <Compile Include="Assets\Scripts\ShowTxt.cs" />
      <Compile Include="Assets\Scripts\SizeSlider.cs" />
-     <None Include="Assets\Scripts\New Text Document.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Hub/Editor/5.5.6f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
