@@ -6,10 +6,11 @@ public class SizeSlider : MonoBehaviour
     public Slider sliderW;
     public Slider sliderH;
     public Image character;
+    public Image assets;
     private float initialYPos;
     public float maxHeight = 550f;
     public float maxWidth = 550f;
-    private float height, width;
+    private float height, width, h, h1, w;
     private Vector2 originalSize;
 
     void Start()
@@ -24,10 +25,12 @@ public class SizeSlider : MonoBehaviour
 
     public void WidthChanging(float value)
     {
+       // w=sliderW.GetComponent<Slider>().value;
         width = value * maxWidth;
         float H = character.rectTransform.sizeDelta.y;
         float scale = width / character.rectTransform.sizeDelta.x;
         character.transform.localScale = new Vector2(scale, H / maxHeight);
+        assets.transform.localScale = new Vector2(scale, H / maxHeight);
     }
 
     public void HeightChanging(float value)
@@ -37,13 +40,14 @@ public class SizeSlider : MonoBehaviour
         float scale = newHeight / character.rectTransform.sizeDelta.y;
         float newWidth = character.rectTransform.sizeDelta.x * scale;
         character.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
-
+        assets.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
         // Move the image up within the frame
         float newYPos = initialYPos + (newHeight - maxHeight) / 2;
         character.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
+        assets.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
     }
 
-    public void ResetSize()
+   /* public void ResetSize()
     {
         // Reset the size of the image to the original size
         character.rectTransform.sizeDelta = originalSize;
@@ -51,5 +55,5 @@ public class SizeSlider : MonoBehaviour
         // Reset the slider values
         sliderW.value = 1f;
         sliderH.value = 1f;
-    }
+    }*/
 }
