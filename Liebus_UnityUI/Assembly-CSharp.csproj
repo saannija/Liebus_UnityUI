@@ -48,7 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Collider.cs" />
      <Compile Include="Assets\Scripts\ColorSlider.cs" />
+     <Compile Include="Assets\Scripts\DropDown.cs" />
      <Compile Include="Assets\Scripts\Moving.cs" />
+     <Compile Include="Assets\Scripts\ShowAll.cs" />
      <Compile Include="Assets\Scripts\ShowImage.cs" />
      <Compile Include="Assets\Scripts\ShowTxt.cs" />
      <Compile Include="Assets\Scripts\SizeSlider.cs" />

@@ -1,16 +1,21 @@
-﻿
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ShowImage : MonoBehaviour
 {
-    public GameObject Skintones, Hair;
-    public Sprite[] images;
-    public void Dropdown(int i)
+    public GameObject button;
+    public GameObject image;
+
+    public void Show(bool i)
     {
-            Skintones.GetComponent<Image>().sprite = images[i];
+        image.SetActive(i);
     }
+    void Start()
+    {
+        button.GetComponent<Toggle>().isOn = false;
+        image.SetActive(false);
+    }
+
 }
