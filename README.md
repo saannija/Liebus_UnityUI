@@ -20,4 +20,4 @@
 - [ ] Ievietot audio
 - [ ] Ievietot scroll view
 - [ ] Ievietot krasu mainosus sliderus
-- [ ] Ievietot 2 slider (platums/garums)
+- [x] Ievietot 2 slider (platums/garums)
