@@ -9,13 +9,13 @@
     - [x] Teksta
     - [x] Skaitlu
 - [x] Izveidot teksta lauku
-- [ ] Izveidot drop-down (iespeja izveleties 2+ telus)
-- [ ] Izveidot dazadas kategorijas:
-    - [ ] Bikses
-    - [ ] Krekli
-    - [ ] Kleitas
-    - [ ] Aksesuari
-- [ ] Izveidot toggle pogu apgerbiem (paradit/paslept)
+- [x] Izveidot drop-down (iespeja izveleties 2+ telus)
+- [x] Izveidot dazadas kategorijas:
+    - [x] Bikses
+    - [x] Krekli
+    - [x] Kleitas
+    - [x] Aksesuari
+- [x] Izveidot toggle pogu apgerbiem (paradit/paslept)
 - [ ] Izveidot drag/drop funkciju apgerbam
 - [ ] Ievietot audio
 - [ ] Ievietot scroll view
