@@ -6,7 +6,6 @@ public class Moving : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
 {
     public Canvas canvas;
     RectTransform rectTransform;
-    Vector2 pointerOffset;
     private BoxCollider2D collider;
     private bool canDrag;
 
