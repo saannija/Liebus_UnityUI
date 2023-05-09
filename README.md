@@ -23,3 +23,4 @@
 - [x] Ievietot krasu mainosus sliderus
 - [x] Ievietot 2 slider (platums/garums)
 - [ ] Release :heavy_check_mark:
+![img](https://i.redd.it/p0vt5sl8rb1a1.jpg)
