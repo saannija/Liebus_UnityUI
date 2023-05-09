@@ -1,7 +1,55 @@
-﻿using UnityEngine;
+﻿/*using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class SizeSlider : MonoBehaviour
+public class ClothesSliders : MonoBehaviour {
+
+    public GameObject[] images;
+    public GameObject Images;
+    public Slider sliderW;
+    public Slider sliderH;
+    private float initialYPos;
+    public float maxHeight = 550f;
+    public float maxWidth = 550f;
+    private float width;
+
+
+    void Start()
+    {
+        sliderW.onValueChanged.AddListener(WidthSlider);
+        sliderH.onValueChanged.AddListener(HeightSlider);
+        initialYPos = images.rectTransform.anchoredPosition.y;
+    }
+
+    public void WidthSlider(float value)
+    {
+        foreach (GameObject image in images)
+        {
+            width = value * maxWidth;
+            float H = images.rectTransform.sizeDelta.y;
+            float scale = width / images.rectTransform.sizeDelta.x;
+            images.transform.localScale = new Vector2(scale, H / maxHeight);
+        }
+    }
+    public void HeightSlider(float value)
+    {
+        foreach (GameObject image in images)
+        {
+            float newHeight = value * maxHeight;
+            float scale = newHeight / images.rectTransform.sizeDelta.y;
+            float newWidth = images.rectTransform.sizeDelta.x * scale;
+            images.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
+            float newYPos = initialYPos + (newHeight - maxHeight) / 2;
+            images.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
+        }
+    }
+}
+*/
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ClothesSlider : MonoBehaviour
 {
     public Slider sliderW;
     public Slider sliderH;
@@ -23,7 +71,7 @@ public class SizeSlider : MonoBehaviour
 
     public void WidthChanging(float value)
     {
-       // w=sliderW.GetComponent<Slider>().value;
+        // w=sliderW.GetComponent<Slider>().value;
         width = value * maxWidth;
         float H = character.rectTransform.sizeDelta.y;
         float scale = width / character.rectTransform.sizeDelta.x;

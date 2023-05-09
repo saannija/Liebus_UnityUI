@@ -16,8 +16,9 @@
     - [x] Kleitas
     - [x] Aksesuari
 - [x] Izveidot toggle pogu apgerbiem (paradit/paslept)
-- [ ] Izveidot drag/drop funkciju apgerbam
+- [x] Izveidot drag/drop funkciju apgerbam
+- [ ] Pievienot snapping opciju apgerbam
 - [ ] Ievietot audio
 - [ ] Ievietot scroll view
-- [ ] Ievietot krasu mainosus sliderus
+- [x] Ievietot krasu mainosus sliderus
 - [x] Ievietot 2 slider (platums/garums)

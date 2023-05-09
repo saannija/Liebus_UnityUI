@@ -8,9 +8,41 @@ public class ColorSlider : MonoBehaviour {
 	public Slider red;
     public Slider green;
     public Slider blue;
-    public Renderer rend;
+    public Image[] images;
 
-	void Update () {
-		rend.material.color=new Color(red.value, green.value, blue.value);
-	}
+	private void Start()
+    {
+        red.onValueChanged.AddListener(RedSlider);
+        blue.onValueChanged.AddListener(BlueSlider);
+        green.onValueChanged.AddListener(GreenSlider);
+    }
+
+    public void RedSlider(float value)
+    {
+        foreach(Image image in images)
+        {
+            Color color = image.color;
+            color.r = value;
+            image.color = color;
+        }
+        
+    }
+    public void BlueSlider(float value)
+    {
+        foreach (Image image in images)
+        {
+            Color color = image.color;
+            color.b = value;
+            image.color = color;
+        }
+    }
+    public void GreenSlider(float value)
+    {
+        foreach (Image image in images)
+        {
+            Color color = image.color;
+            color.g = value;
+            image.color = color;
+        }
+    }
 }

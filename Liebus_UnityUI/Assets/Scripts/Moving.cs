@@ -1,1 +1,48 @@
-﻿using System.Collections;using System.Collections.Generic;using UnityEngine;using UnityEngine.EventSystems;public class Moving : MonoBehaviour , IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler{ // IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler    private RectTransform transform;	public Canvas canva;	private void Awake()	{		transform = GetComponent<RectTransform>();	}    public void OnPointerDown(PointerEventData eventData)	{	}    public void OnDrag(PointerEventData eventData)	{		Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);        mousePosition.x = Mathf.Clamp(mousePosition.x, 0 + transform.rect.width, Screen.width - transform.rect.width);        mousePosition.y = Mathf.Clamp(mousePosition.x, 0 + transform.rect.height, Screen.height - transform.rect.height);        transform.position = Input.mousePosition;       // transform.anchoredPosition += eventData.delta/canva.scaleFactor;		Debug.Log(mousePosition.x+" "+mousePosition.y);	}    public void OnBeginDrag(PointerEventData eventData)    {    }    public void OnEndDrag(PointerEventData eventData)    {    }}
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+public class Moving : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+{
+    public Canvas canvas;
+    RectTransform rectTransform;
+    Vector2 pointerOffset;
+    private BoxCollider2D collider;
+    private bool canDrag;
+
+    void Start()
+    {
+        rectTransform = GetComponent<RectTransform>();
+        collider = GetComponent<BoxCollider2D>();
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("click");
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        Vector2 localCursor;
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out localCursor))
+        {
+            canDrag = collider.OverlapPoint(rectTransform.TransformPoint(localCursor));
+        }
+        Debug.Log("begin drag");
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (canDrag)
+        {
+            Debug.Log("dragging");
+            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor / 7;
+        }
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        canDrag = false;
+        Debug.Log("end drag");
+    }
+}
