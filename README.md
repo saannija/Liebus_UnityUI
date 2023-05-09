@@ -3,7 +3,7 @@
 ### Iesakumam:
 - [x] Izveleties temu
 - [x] Atrast/Izveidot dizainus
-- [ ] Atrast skanas
+- [x] Atrast skanas
 ### Unity:
 - [x] Izveidot teksta ievades laukus:
     - [x] Teksta
@@ -18,7 +18,8 @@
 - [x] Izveidot toggle pogu apgerbiem (paradit/paslept)
 - [x] Izveidot drag/drop funkciju apgerbam
 - [ ] Pievienot snapping opciju apgerbam
-- [ ] Ievietot audio
+- [x] Ievietot audio
 - [ ] Ievietot scroll view
 - [x] Ievietot krasu mainosus sliderus
 - [x] Ievietot 2 slider (platums/garums)
+- [ ] Release :heavy_check_mark:
