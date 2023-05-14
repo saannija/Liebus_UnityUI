@@ -18,6 +18,7 @@
 - [x] Izveidot toggle pogu apgerbiem (paradit/paslept)
 - [x] Izveidot drag/drop funkciju apgerbam
 - [ ] Pievienot snapping opciju apgerbam
+- [ ] Izdarit ta, lai apgerbs maina izmeru lidz ar cilveku
 - [x] Ievietot audio
 - [x] Ievietot scroll view
 - [x] Ievietot krasu mainosus sliderus
