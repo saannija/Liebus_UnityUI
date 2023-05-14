@@ -22,4 +22,5 @@
 - [ ] Ievietot scroll view
 - [x] Ievietot krasu mainosus sliderus
 - [x] Ievietot 2 slider (platums/garums)
+- [ ] Ievietot jaunu ainu (sakums)
 - [ ] Release :heavy_check_mark:
