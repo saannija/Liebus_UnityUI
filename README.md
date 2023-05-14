@@ -19,8 +19,9 @@
 - [x] Izveidot drag/drop funkciju apgerbam
 - [ ] Pievienot snapping opciju apgerbam
 - [x] Ievietot audio
-- [ ] Ievietot scroll view
+- [x] Ievietot scroll view
 - [x] Ievietot krasu mainosus sliderus
 - [x] Ievietot 2 slider (platums/garums)
-- [ ] Ievietot jaunu ainu (sakums)
+- [x] Ievietot jaunu ainu (sakums)
+- [ ] Sakartot visu, vizuali padarit labaku
 - [ ] Release :heavy_check_mark:
