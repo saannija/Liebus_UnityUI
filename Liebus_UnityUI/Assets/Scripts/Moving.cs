@@ -6,13 +6,13 @@ public class Moving : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
 {
     public Canvas canvas;
     RectTransform rectTransform;
-    private BoxCollider2D collider;
+    private BoxCollider2D collider1;
     private bool canDrag;
 
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        collider = GetComponent<BoxCollider2D>();
+        collider1 = GetComponent<BoxCollider2D>();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -25,7 +25,7 @@ public class Moving : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
         Vector2 localCursor;
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, eventData.position, eventData.pressEventCamera, out localCursor))
         {
-            canDrag = collider.OverlapPoint(rectTransform.TransformPoint(localCursor));
+            canDrag = collider1.OverlapPoint(rectTransform.TransformPoint(localCursor));
         }
         Debug.Log("begin drag");
     }

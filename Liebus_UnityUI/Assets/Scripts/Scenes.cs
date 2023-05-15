@@ -1,12 +1,1 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class Scenes : MonoBehaviour {
-
-    public void ToStart()
-    {
-        SceneManager.LoadScene("Start", LoadSceneMode.Single);
-    }
-}
+﻿using System.Collections;using System.Collections.Generic;using UnityEngine;using UnityEngine.SceneManagement;public class Scenes : MonoBehaviour {    public void ToStart()    {        SceneManager.LoadScene(0, LoadSceneMode.Single);    }    public void ToScene()    {        SceneManager.LoadScene(1, LoadSceneMode.Single);    }    public void Exit()    {        Application.Quit();    }}
