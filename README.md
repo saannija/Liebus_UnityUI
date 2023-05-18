@@ -26,4 +26,4 @@
 - [x] Ievietot jaunu ainu (sakums)
 - [x] Sakartot visu, vizuali padarit labaku
 - [x] Izlabot to, ka cilveks maina platumu, kad mainas garums
-- [ ] Release :heavy_check_mark:
+- [x] Release :heavy_check_mark:
