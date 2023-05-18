@@ -28,32 +28,25 @@ public class SizeSlider : MonoBehaviour
     public void WidthChanging(float value)
     {
         float newWidth = value * maxWidth;
-        float currentHeight = character.rectTransform.sizeDelta.y;
 
-        character.rectTransform.sizeDelta = new Vector2(newWidth, currentHeight);
-        eyes.rectTransform.sizeDelta = new Vector2(newWidth, currentHeight);
-        mouth.rectTransform.sizeDelta = new Vector2(newWidth, currentHeight);
-        eyebrows.rectTransform.sizeDelta = new Vector2(newWidth, currentHeight);
-
-        // Move the image up within the frame
-        float newYPos = initialYPos + (currentHeight - maxHeight) / 2;
-        character.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
-        eyes.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
-        mouth.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
-        eyebrows.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
+        // Only update the width, keep the height unchanged
+        character.rectTransform.sizeDelta = new Vector2(newWidth, character.rectTransform.sizeDelta.y);
+        eyes.rectTransform.sizeDelta = new Vector2(newWidth, eyes.rectTransform.sizeDelta.y);
+        mouth.rectTransform.sizeDelta = new Vector2(newWidth, mouth.rectTransform.sizeDelta.y);
+        eyebrows.rectTransform.sizeDelta = new Vector2(newWidth, eyebrows.rectTransform.sizeDelta.y);
     }
+
 
 
     public void HeightChanging(float value)
     {
         float newHeight = value * maxHeight;
-        float aspectRatio = character.rectTransform.sizeDelta.x / character.rectTransform.sizeDelta.y;
-        float newWidth = newHeight * aspectRatio;
 
-        character.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
-        eyes.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
-        mouth.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
-        eyebrows.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
+        // Only update the height, keep the width unchanged
+        character.rectTransform.sizeDelta = new Vector2(character.rectTransform.sizeDelta.x, newHeight);
+        eyes.rectTransform.sizeDelta = new Vector2(eyes.rectTransform.sizeDelta.x, newHeight);
+        mouth.rectTransform.sizeDelta = new Vector2(mouth.rectTransform.sizeDelta.x, newHeight);
+        eyebrows.rectTransform.sizeDelta = new Vector2(eyebrows.rectTransform.sizeDelta.x, newHeight);
 
         // Move the image up within the frame
         float newYPos = initialYPos + (newHeight - maxHeight) / 2;
@@ -62,4 +55,5 @@ public class SizeSlider : MonoBehaviour
         mouth.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
         eyebrows.rectTransform.anchoredPosition = new Vector2(character.rectTransform.anchoredPosition.x, newYPos);
     }
+
 }

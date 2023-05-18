@@ -24,6 +24,6 @@
 - [x] Ievietot krasu mainosus sliderus
 - [x] Ievietot 2 slider (platums/garums)
 - [x] Ievietot jaunu ainu (sakums)
-- [ ] Sakartot visu, vizuali padarit labaku
-- [ ] Izlabot to, ka cilveks maina platumu, kad mainas garums
+- [x] Sakartot visu, vizuali padarit labaku
+- [x] Izlabot to, ka cilveks maina platumu, kad mainas garums
 - [ ] Release :heavy_check_mark:
